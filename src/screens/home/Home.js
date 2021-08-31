@@ -76,7 +76,6 @@ const Home = (props) => {
         setUpcomingMovies(response.movies);
       });
 
-    // Get released movies
     let dataReleased = null;
     fetch(props.baseUrl + "movies?status=RELEASED", {
       method: "GET",
@@ -91,8 +90,6 @@ const Home = (props) => {
       .then((response) => {
         setReleasedMovies(response.movies);
       });
-
-    // Get filters
 
     let dataGenres = null;
     fetch(props.baseUrl + "genres", {
@@ -109,7 +106,6 @@ const Home = (props) => {
         setGenresList(response.genres);
       });
 
-    // Get artists
     let dataArtists = null;
     fetch(props.baseUrl + "artists", {
       method: "GET",

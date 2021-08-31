@@ -39,6 +39,7 @@ const BookShow = (props) => {
     fetch(props.baseUrl + "movies/" + props.match.params.id + "/shows", {
       method: "GET",
       headers: {
+        Accept: "application/json",
         "Content-Type": "application/json",
         "Cache-Control": "no-cache",
       },
@@ -285,9 +286,7 @@ const BookShow = (props) => {
             <br />
             <Typography>Unit Price: Rs. {unitPrice}</Typography>
             <br />
-            <Typography>
-              Total Price: Rs. {unitPrice * tickets}
-            </Typography>
+            <Typography>Total Price: Rs. {unitPrice * tickets}</Typography>
             <br />
             <br />
             <Button
